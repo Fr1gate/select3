@@ -9,12 +9,9 @@ class Select3
         }
 
         if (e !== null && e.nodeName.toUpperCase() == "SELECT") {
-            //setting id and realElement
             Select3.numberOfMe++;
             this.id = `Select3_${Select3.numberOfMe}`;
             this.realContainer = e;
-            console.log("construcor: ");
-            console.log(this.realContainer.parentElement);
         } else {
             throw new Error('Element is not \<select\>');
         }
@@ -38,8 +35,6 @@ class Select3
 
     hideReal() {
         this.realContainer.style.display = "none";
-        // this.realContainer.style.visibility = "hidden";
-        // this.realContainer.style.position = "absolute";
     }
 
     createFake() {
@@ -109,35 +104,6 @@ class Select3
         this.displaySelected();
         this.optionsContainer.classList.toggle("select3_d-none");
     }
-
-    getIndex(el) {
-        if (!el) return -1;
-        let i = 0;
-        while (el = el.previousElementSibling) {
-            i++;
-        }
-        return i;
-    }
 }
+
 Select3.numberOfMe = 0; //static variable
-
-let mySelect = new Select3(".select3");
-console.log("outside: ");
-console.log(mySelect.realContainer.parentElement);
-
-// стрелочка добавляется в js через width + padding-right и псевдоэлемент
-//      canvas?
-// need to bind this with real select
-//     mark real option as selected
-// походу сломал что-то с realContainer
-// realcontainer становится копией элеменета, а не самим элементом fuck js
-
-class test {
-    constructor() {
-        this.submit = document.querySelector("#submit");
-        console.log(this.submit.parentElement);
-    }
-}
-
-const myTest = new test();
-console.log(myTest.submit.parentElement);
