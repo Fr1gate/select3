@@ -1,0 +1,15 @@
+{
+  "name": "select3",
+  "version": "0.0.1",
+  "description": "VERY simple <select> form element, that supports easy styling",
+  "main": "select3.js",
+  "scripts": {
+    
+  },
+  "keywords": [
+    "select",
+    "option"
+  ],
+  "author": "Fr1gate",
+  "license": "ISC"
+}
