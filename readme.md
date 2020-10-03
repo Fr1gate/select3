@@ -1,12 +1,12 @@
-##Step1
-###Create a new instance of Select3 class, and pass it querySelector of your own select element.
+## Step1
+### Create a new instance of Select3 class, and pass it querySelector of your own select element.
 
 ```js
 const mySelect = new Select3("#my-select");
 ```
 
-##Step2
-###Add following css to your project:
+## Step2
+### Add following css to your project:
 
 ```css
 .select3_d-none {
