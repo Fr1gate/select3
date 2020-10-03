@@ -81,7 +81,7 @@ class Select3
     displaySelected() {
         let selected;
         if (selected = this.optionsContainer.querySelector("li[selected]")) {
-            this.selectedContainer.innerHTML = selected.innerHTML;
+            this.selectedContainer.innerHTML = selected.innerHTML + '<div class="select3__arrow-container"><i class=\"select3__arrow\"></div>';
         }
         
     }
@@ -99,8 +99,7 @@ class Select3
     optionClickHandler(e) {
         this.clearSelected();
         e.target.setAttribute('selected', 'selected');
-        let newValue = e.target.getAttribute('value');
-        this.realContainer.value = newValue;
+        this.realContainer.value = e.target.getAttribute('value');
         this.displaySelected();
         this.optionsContainer.classList.toggle("select3_d-none");
     }
