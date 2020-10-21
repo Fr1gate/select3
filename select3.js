@@ -1,4 +1,4 @@
-export class Select3 
+class Select3 
 {
 
     constructor(element = '') {
@@ -106,3 +106,5 @@ export class Select3
 }
 
 Select3.numberOfMe = 0; //static variable
+
+export default Select3;
