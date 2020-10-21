@@ -1,4 +1,4 @@
-class Select3 
+export class Select3 
 {
 
     constructor(element = '') {
