@@ -1,7 +1,7 @@
 class Select3 
 {
 
-    constructor(element = '') {
+    constructor(element = '', params = {}) {
         try {
             var e = document.querySelector(element);
         } catch (err) {
@@ -15,6 +15,8 @@ class Select3
         } else {
             throw new Error('Element is not \<select\>');
         }
+
+        this.params = params;
 
         //binds
         this.selectClickHandler = this.selectClickHandler.bind(this);
@@ -102,6 +104,10 @@ class Select3
         this.realContainer.value = e.target.getAttribute('value');
         this.displaySelected();
         this.optionsContainer.classList.toggle("select3_d-none");
+
+        if (this.params.onChange instanceof Function) {
+            this.params.onChange();            
+        }
     }
 }
 
