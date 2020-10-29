@@ -76,8 +76,8 @@ class Select3
             item.classList = e.classes.join(' ');
             item.setAttribute('value', e.value);
             this.optionsContainer.appendChild(item);
-            this.optionsContainer.classList.toggle("select3_d-none");
         });
+        this.optionsContainer.classList.toggle("select3_d-none");
     }
 
     displaySelected() {
